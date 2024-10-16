@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100dvw;
+    height: 100vh;
+    padding: 0 30px;
+}
+
+nav {
+    background-color: #F5F6F8;
+    margin-bottom: 10px;
+    padding: 15px 30px;
+    border: 1px solid #BEBBBB;
+    font-weight: 400;
+}
+
+
+.filter {
+    margin-right: 25px;
+    float: left;
+}
+
+.pt-filters {
+
+    button {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.pt-filters .hover-disabled:hover {
+    background-color: #005daa;
+}
+
+.pt-ele {
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: #555759;
+    color: white;
+
+    &:hover {
+        background-color: #6e6f71;
+        color: white;
+    }
+}
+
+#cg-all,
+#cg-nonmetals,
+#cg-states {
+    margin-right: 25px;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: block;
+        border-right: 1.3px solid #BEBBBB;
+        right: -16px;
+        top: 0;
+
+    }
+}
+
+.pt-filter-hide {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.active {
+    background-color: #555759 !important;
+}
+
+#pt-reset {
+    background: none;
+    color: #2d2e2f;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px 0 0 100px;
+    padding: 0;
+    border: none;
+}
+
+.pt-table {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: 68px 68px 68px 68px 68px 68px 68px 40px 68px 68px;
+    gap: 2px;
+
+}
+
+.pt-table .pt-element {
+    width: 62px;
+    height: 62px;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-direction: column;
+
+}
+
+#h {
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+#he {
+    grid-area: 1 / 18 / 1 / 18;
+}
+
+#li {
+    grid-area: 2 / 1 / 2 / 1;
+}
+
+#be {
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+#b {
+    grid-area: 2/13/2/13;
+}
+#c{
+    grid-area: 2 / 14 / 2 / 14;
+}
+#n {
+    grid-area: 2 / 15 / 2 / 15;
+}
+
+#o {
+    grid-area: 2 / 16 / 2 / 16;
+}
+
+#f {
+    grid-area: 2 / 17 / 2 / 17;
+}
+
+#ne {
+    grid-area: 2 / 18 / 2 / 18;
+}
