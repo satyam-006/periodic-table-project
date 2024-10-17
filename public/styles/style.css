@@ -8,6 +8,7 @@ main {
     width: 100dvw;
     height: 100vh;
     padding: 0 30px;
+    overflow-x: hidden;
 }
 
 nav {
@@ -88,61 +89,4 @@ nav {
     border: none;
 }
 
-.pt-table {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: 68px 68px 68px 68px 68px 68px 68px 40px 68px 68px;
-    gap: 2px;
 
-}
-
-.pt-table .pt-element {
-    width: 62px;
-    height: 62px;
-    border: 2px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    flex-direction: column;
-
-}
-
-#h {
-    grid-area: 1 / 1 / 1 / 1;
-}
-
-#he {
-    grid-area: 1 / 18 / 1 / 18;
-}
-
-#li {
-    grid-area: 2 / 1 / 2 / 1;
-}
-
-#be {
-    grid-area: 2 / 2 / 2 / 2;
-}
-
-#b {
-    grid-area: 2/13/2/13;
-}
-#c{
-    grid-area: 2 / 14 / 2 / 14;
-}
-#n {
-    grid-area: 2 / 15 / 2 / 15;
-}
-
-#o {
-    grid-area: 2 / 16 / 2 / 16;
-}
-
-#f {
-    grid-area: 2 / 17 / 2 / 17;
-}
-
-#ne {
-    grid-area: 2 / 18 / 2 / 18;
-}

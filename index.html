@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/styles/style.css">
+    <link rel="stylesheet" href="./public/styles/elementStyle.css">
 </head>
 
 <body>
@@ -23,24 +24,30 @@
 
                 <div class="pt-col pt-filters">
                     <button class="btn btn-outline-secondary btn-sm topic-item" type="button" id="cg-all">All</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button" id="cg-metals">Metals</button>
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                        id="cg-metals">Metals</button>
                     <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
                         id="cg-metalloids">Metalloids</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button" id="cg-nonmetals">Nonmetals</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button" id="cg-states">States</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button" id="cg-groups">Groups</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button" id="cg-periods">Periods</button>
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                        id="cg-nonmetals">Nonmetals</button>
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                        id="cg-states">States</button>
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                        id="cg-groups">Groups</button>
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                        id="cg-periods">Periods</button>
                 </div>
             </div>
             <div class="pt-filter-hide">
-                <div class="pt-element pt-nav-element pt-alkali pt-color-guide pt-filter-metal" id="cg-alkali" style="display: none;">
+                <div class="pt-element pt-nav-element pt-alkali pt-color-guide pt-filter-metal" id="cg-alkali"
+                    style="display: none;">
                     Alkali Metals</div>
                 <div class="pt-element pt-nav-element pt-alkaline pt-color-guide pt-filter-metal" id="cg-alkaline"
                     style="display: none;">Alkaline Earth Metals</div>
                 <div class="pt-element pt-nav-element pt-transition pt-color-guide pt-filter-metal" id="cg-transition"
                     style="display: none;">Transition Metals</div>
-                <div class="pt-element pt-nav-element pt-post-transition pt-color-guide pt-filter-metal" id="cg-post-transition"
-                    style="display: none;">Post-Transition Metals</div>
+                <div class="pt-element pt-nav-element pt-post-transition pt-color-guide pt-filter-metal"
+                    id="cg-post-transition" style="display: none;">Post-Transition Metals</div>
 
                 <!-- <div class="pt-element pt-metalloids pt-color-guide pt-filter-metal" id="cg-metalloids">Metalloids</div> -->
                 <div class="pt-element pt-nav-element pt-lanthanide pt-color-guide pt-filter-metal" id="cg-lanthanide"
@@ -52,61 +59,217 @@
                     style="display: none;">Nonmetals</div>
                 <div class="pt-element pt-nav-element pt-halogen pt-color-guide pt-filter-nonmetal" id="cg-halogen"
                     style="display: none;">Halogens</div>
-                <div class="pt-element pt-nav-element pt-noble pt-color-guide pt-filter-nonmetal" id="cg-noble" style="display: none;">
+                <div class="pt-element pt-nav-element pt-noble pt-color-guide pt-filter-nonmetal" id="cg-noble"
+                    style="display: none;">
                     Noble Gases</div>
-                <div class="pt-element pt-nav-element pt-gas pt-color-guide pt-filter-states" id="cg-gas" style="display: none;">Gases
+                <div class="pt-element pt-nav-element pt-gas pt-color-guide pt-filter-states" id="cg-gas"
+                    style="display: none;">Gases
                 </div>
-                <div class="pt-element pt-nav-element pt-liquid pt-color-guide pt-filter-states" id="cg-liquid" style="display: none;">
+                <div class="pt-element pt-nav-element pt-liquid pt-color-guide pt-filter-states" id="cg-liquid"
+                    style="display: none;">
                     Liquids</div>
-                <div class="pt-element pt-nav-element pt-solid pt-color-guide pt-filter-states" id="cg-solid" style="display: none;">
+                <div class="pt-element pt-nav-element pt-solid pt-color-guide pt-filter-states" id="cg-solid"
+                    style="display: none;">
                     Solids</div>
                 <div class="pt-element pt-nav-element pt-unknown pt-color-guide pt-filter-states" id="cg-unknown"
                     style="display: none;">Unknown</div>
-                <div class="pt-element pt-nav-element pt-color-guide group1 pt-filter-groups" id="cg-g1" style="display: none;">1</div>
-                <div class="pt-element pt-nav-element pt-color-guide group2 pt-filter-groups" id="cg-g2" style="display: none;">2</div>
-                <div class="pt-element pt-nav-element pt-color-guide group3 pt-filter-groups" id="cg-g3" style="display: none;">3</div>
-                <div class="pt-element pt-nav-element pt-color-guide group4 pt-filter-groups" id="cg-g4" style="display: none;">4</div>
-                <div class="pt-element pt-nav-element pt-color-guide group5 pt-filter-groups" id="cg-g5" style="display: none;">5</div>
-                <div class="pt-element pt-nav-element pt-color-guide group6 pt-filter-groups" id="cg-g6" style="display: none;">6</div>
-                <div class="pt-element pt-nav-element pt-color-guide group7 pt-filter-groups" id="cg-g7" style="display: none;">7</div>
-                <div class="pt-element pt-nav-element pt-color-guide group8 pt-filter-groups" id="cg-g8" style="display: none;">8</div>
-                <div class="pt-element pt-nav-element pt-color-guide group9 pt-filter-groups" id="cg-g9" style="display: none;">9</div>
-                <div class="pt-element pt-nav-element pt-color-guide group10 pt-filter-groups" id="cg-g10" style="display: none;">10
+                <div class="pt-element pt-nav-element pt-color-guide group1 pt-filter-groups" id="cg-g1"
+                    style="display: none;">1</div>
+                <div class="pt-element pt-nav-element pt-color-guide group2 pt-filter-groups" id="cg-g2"
+                    style="display: none;">2</div>
+                <div class="pt-element pt-nav-element pt-color-guide group3 pt-filter-groups" id="cg-g3"
+                    style="display: none;">3</div>
+                <div class="pt-element pt-nav-element pt-color-guide group4 pt-filter-groups" id="cg-g4"
+                    style="display: none;">4</div>
+                <div class="pt-element pt-nav-element pt-color-guide group5 pt-filter-groups" id="cg-g5"
+                    style="display: none;">5</div>
+                <div class="pt-element pt-nav-element pt-color-guide group6 pt-filter-groups" id="cg-g6"
+                    style="display: none;">6</div>
+                <div class="pt-element pt-nav-element pt-color-guide group7 pt-filter-groups" id="cg-g7"
+                    style="display: none;">7</div>
+                <div class="pt-element pt-nav-element pt-color-guide group8 pt-filter-groups" id="cg-g8"
+                    style="display: none;">8</div>
+                <div class="pt-element pt-nav-element pt-color-guide group9 pt-filter-groups" id="cg-g9"
+                    style="display: none;">9</div>
+                <div class="pt-element pt-nav-element pt-color-guide group10 pt-filter-groups" id="cg-g10"
+                    style="display: none;">10
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide group11 pt-filter-groups" id="cg-g11" style="display: none;">11
+                <div class="pt-element pt-nav-element pt-color-guide group11 pt-filter-groups" id="cg-g11"
+                    style="display: none;">11
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide group12 pt-filter-groups" id="cg-g12" style="display: none;">12
+                <div class="pt-element pt-nav-element pt-color-guide group12 pt-filter-groups" id="cg-g12"
+                    style="display: none;">12
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide group13 pt-filter-groups" id="cg-g13" style="display: none;">13
+                <div class="pt-element pt-nav-element pt-color-guide group13 pt-filter-groups" id="cg-g13"
+                    style="display: none;">13
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide group14 pt-filter-groups" id="cg-g14" style="display: none;">14
+                <div class="pt-element pt-nav-element pt-color-guide group14 pt-filter-groups" id="cg-g14"
+                    style="display: none;">14
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide group15 pt-filter-groups" id="cg-g15" style="display: none;">15
+                <div class="pt-element pt-nav-element pt-color-guide group15 pt-filter-groups" id="cg-g15"
+                    style="display: none;">15
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide group16 pt-filter-groups" id="cg-g16" style="display: none;">16
+                <div class="pt-element pt-nav-element pt-color-guide group16 pt-filter-groups" id="cg-g16"
+                    style="display: none;">16
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide group17 pt-filter-groups" id="cg-g17" style="display: none;">17
+                <div class="pt-element pt-nav-element pt-color-guide group17 pt-filter-groups" id="cg-g17"
+                    style="display: none;">17
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide group18 pt-filter-groups" id="cg-g18" style="display: none;">18
+                <div class="pt-element pt-nav-element pt-color-guide group18 pt-filter-groups" id="cg-g18"
+                    style="display: none;">18
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide period1 pt-filter-periods" id="cg-p1" style="display: none;">1
+                <div class="pt-element pt-nav-element pt-color-guide period1 pt-filter-periods" id="cg-p1"
+                    style="display: none;">1
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide period2 pt-filter-periods" id="cg-p2" style="display: none;">2
+                <div class="pt-element pt-nav-element pt-color-guide period2 pt-filter-periods" id="cg-p2"
+                    style="display: none;">2
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide period3 pt-filter-periods" id="cg-p3" style="display: none;">3
+                <div class="pt-element pt-nav-element pt-color-guide period3 pt-filter-periods" id="cg-p3"
+                    style="display: none;">3
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide period4 pt-filter-periods" id="cg-p4" style="display: none;">4
+                <div class="pt-element pt-nav-element pt-color-guide period4 pt-filter-periods" id="cg-p4"
+                    style="display: none;">4
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide period5 pt-filter-periods" id="cg-p5" style="display: none;">5
+                <div class="pt-element pt-nav-element pt-color-guide period5 pt-filter-periods" id="cg-p5"
+                    style="display: none;">5
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide period6 pt-filter-periods" id="cg-p6" style="display: none;">6
+                <div class="pt-element pt-nav-element pt-color-guide period6 pt-filter-periods" id="cg-p6"
+                    style="display: none;">6
                 </div>
-                <div class="pt-element pt-nav-element pt-color-guide period7 pt-filter-periods" id="cg-p7" style="display: none;">7
+                <div class="pt-element pt-nav-element pt-color-guide period7 pt-filter-periods" id="cg-p7"
+                    style="display: none;">7
                 </div>
             </div>
             <button id="pt-reset" style="display: inline-block;">Reset</button>
         </nav>
         <div class="pt-table">
+            <section class="pt-element-desc">
+                <div class="pt-alkali-desc" style="display: block;">
+                    <h2>Alkali Metals</h2>
+                    <p>The alkali metals form Group I of the periodic table. Their name refers to the alkaline
+                        substances that form when these elements react with water. The most common of these elements are
+                        sodium and potassium. Rubidium, lithium, and cesium are more rare, making up, in order, 0.03,
+                        0.007, and 0.0007 percent of the Earth’s crust. </p>
+                    <p>These elements are very reactive, and usually occur in nature already combined with other
+                        elements. They have a silver-like luster, high ductility, and are excellent conductors of
+                        electricity and heat. Alkali metals have low melting points, ranging from 28.5° to 179°C.</p>
+                </div>
+                <div class="pt-alkaline-desc" style="display: none;">
+                    <h2>Alkaline Earth Metals</h2>
+                    <p>Alkaline Earth metals form Group 2 of the periodic table. Except for radium, all of the elements
+                        in this group are used in commercial applications. Magnesium and calcium are two of the six most
+                        common elements on Earth, and are essential to some geological and biological processes.</p>
+                    <p>These elements have a shiny gray-white appearance. They are good conductors of electricity and
+                        have higher melting and boiling points than the alkali metals. Melting points range from 650° to
+                        1,287°C and boiling points range from 1,090° to 2,471°C. </p>
+                </div>
+                <div class="pt-nonmetals-desc" style="display: none;">
+                    <h2>Nonmetals</h2>
+                    <p>Nonmetals include hydrogen, carbon, nitrogen, phosphorus, oxygen, sulfur, selenium, the halogens
+                        fluorine, chlorine, bromine, and iodine, and the noble gas elements. Oxygen and other element in
+                        this group comprise a large portion of the Earth’s crust. Hydrogen, oxygen, carbon, and nitrogen
+                        are elements found in all living organisms. </p>
+                    <p>Most atoms of nonmetals are small and have high numbers of electrons, which makes these elements
+                        fairly inert and gives them high electronegativities.</p>
+                </div>
+                <div class="pt-transition-metals-desc" style="display: none;">
+                    <h2>Transition Metals</h2>
+                    <p>A transition metal is defined by IUPAC as "an element whose atom has a partially filled d
+                        sub-shell, or which can give rise to cations with an incomplete d sub-shell”. Transition metals
+                        are found in Groups 4 through 11of the periodic table; elements in Groups 3 and 12 are sometimes
+                        included.</p>
+                    <p>Similar to the metals, transition metals are malleable and ductile, conduct heat and electricity,
+                        and form positive ions. However, these elements are more electronegative and more likely to form
+                        covalent compounds. Transition metals can form useful alloys with other transition or metallic
+                        elements. </p>
+                </div>
+                <div class="pt-post-transition-desc" style="display: none;">
+                    <h2>Post-Transition Metals</h2>
+                    <p>Post-transition metals are generally considered to be elements in Groups 13, 14, and 15. All of
+                        the classifications include the elements gallium, indium, tin, thallium, lead, and bismuth.
+                        However, depending on how “post-transition” is defined, this category may contain as few as six
+                        or as many as 22 elements. </p>
+                    <p>The post-transition metals share many similarities with the metals, including malleability,
+                        ductility, and conductivity of heat and electricity, but are usually softer and have lower
+                        melting and boiling points than the transition metals. They have poor mechanical strength, form
+                        covalent bonds, and display acid-base amphoterism. </p>
+                </div>
+                <div class="pt-lanthanides-desc" style="display: none;">
+                    <h2>Lanthanides</h2>
+                    <p>Lanthanides make up the 15 metallic chemical elements with atomic numbers 57 through 71. Called
+                        lanthanides because they are chemically similar to lanthanum, these elements and the actinides
+                        form the category of rare earth elements. Despite this moniker, these chemicals are fairly
+                        abundant in the Earth’s crust. For example, cerium is the 25th most abundant element. </p>
+                    <p>Lanthanides oxidize rapidly in moist air, dissolve quickly in acids, and react slowly with oxygen
+                        at room temperature. These elements are used in superconductors and hybrid car components,
+                        primarily as magnets and batteries. They are also used in the production of specialty glass.
+                    </p>
+                </div>
+                <div class="pt-actinides-desc" style="display: none;">
+                    <h2>Actinides</h2>
+                    <p>The 15 metallic elements with atomic numbers 89 to 104, actinium through lawrencium, are referred
+                        to as the actinides. All of these elements are radioactive, relatively unstable, and release
+                        energy in the form of radioactive decay. However, they can form stable complexes with ligands,
+                        such as chloride, sulfate, carbonate, and acetate.</p>
+                    <p>Their radioactivity, toxicity, pyrophoricity, and nuclear criticality make the actinides
+                        hazardous to handle. Uranium and plutonium have been used in nuclear plants and in atomic
+                        weapons. Some actinides occur naturally in seawater or minerals, but the actinides with atomic
+                        numbers 95 to 104 are man-made, created using particle accelerators.</p>
+                </div>
+                <div class="pt-metalloids-desc" style="display: none;">
+                    <h2>Metalloids</h2>
+                    <p>The most commonly recognized metalloids include boron, silicon, germanium, arsenic, antimony, and
+                        tellurium. Their properties are a mixture of or fall between those of metals and nonmetals, and
+                        the number of elements included in this category can vary.</p>
+                    <p>Metalloids have a shiny appearance like metals, but behave more like non-metals. They have fair
+                        electrical conductivity and brittle structures. Chemically, they have intermediate ionization
+                        energies and electronegativity values, and form amphoteric or weakly acidic oxides. Metalloids
+                        are used in alloys, biological agents, catalysts, flame retardants, glass, optical storage and
+                        optoelectronics, pyrotechnics, semiconductors, and electronics. </p>
+                </div>
+                <div class="pt-halogens-desc" style="display: none;">
+                    <h2>Halogens</h2>
+                    <p>Halogens are the non-metallic elements found in group 17 of the periodic table: and include
+                        fluorine, chlorine, bromine, iodine, and astatine. They are the only group whose elements at
+                        room temperature include solid, liquid, and gas forms of matter. When halogens react with
+                        metals, they produce a range of useful salts, including calcium fluoride, sodium chloride,
+                        silver bromide, and potassium iodide. </p>
+                    <p>Since halogens are one electron short of having full shells, they can combine with many different
+                        elements. They are highly reactive and can be lethal in concentrated amounts. Commercially,
+                        halogens are used in disinfectants, lighting, and drug components.</p>
+                </div>
+                <div class="pt-nobel-desc" style="display: none;">
+                    <h2>Noble Gases</h2>
+                    <p>The noble gases form Group 18 for the first six periods of the periodic table. They’re colorless,
+                        odorless, tasteless, and nonflammable. It was originally believed that their atoms could not
+                        bond to other elements or form chemical compounds, but that has since been disproven.</p>
+                    <p>Several of these gases are considered very abundant on earth, and all are present in the Earth’s
+                        atmosphere. Except for helium and radon, noble gases can be extracted from the air using
+                        liquefaction and fractional distillation. Helium is obtained from natural gas wells and radon is
+                        a product of radioactive decay.</p>
+                </div>
+                <div class="pt-groups-desc" style="display: none;">
+                    <h2>Groups</h2>
+                    <p>When Dmitri Mendeleev created the periodic table in the late 19th century, he grouped elements by
+                        atomic weight. When grouped by weight, the behavior of the elements appeared to occur in regular
+                        intervals or periods. The columns of the modern periodic table represent groups of elements and
+                        rows represent the periods. The groups are numbered one through 18. Elements in the same group
+                        can be expected to behave in a similar way because they have the same number of electrons in
+                        their outermost shell. </p>
+                </div>
+                <div class="pt-periods-desc" style="display: none;">
+                    <h2>Periods</h2>
+                    <p>Although elements in the same row or period have number of electron shells in common, the
+                        properties of the elements are more closely related to the group (vertical columns) to which
+                        they belong.</p>
+                </div>
+            </section>
+            <section class="pt-element pt-key pt-not-selected" id="key">
+                <div class="key-title">Key</div>
+                <div class="key-info"><img
+                        src="https://beta-static.fishersci.com/content/dam/fishersci/en_US/images/periodic-table/key.png"
+                        alt="Key" loading="lazy" data-uw-rm-alt-original="Key" data-uw-rm-alt="ALT"></div>
+            </section>
         </div>
     </main>
 

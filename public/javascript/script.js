@@ -115,7 +115,7 @@ elementsData.forEach(element => {
     const div = document.createElement('div');
     div.classList.add("pt-element", element.category); 
     div.setAttribute("id",((element.symbol).toLowerCase()))
-    // div.innerHTML = `<strong>${element.symbol}</strong><br>${element.number}`;
+    div.innerHTML = `<strong>${element.symbol}</strong><br>${element.atomicNumber}`;
 
     ptTable.appendChild(div);
 });
