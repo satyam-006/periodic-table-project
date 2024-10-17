@@ -79,6 +79,17 @@ nav {
     background-color: #555759 !important;
 }
 
+.hidden-active{
+    background-color: transparent !important;
+    border: 1px solid #2d2e2f !important;
+    color: #2d2e2f;
+
+    &:hover{
+        color: white !important;
+        background-color: #005daa !important;
+    }
+}
+
 #pt-reset {
     background: none;
     color: #2d2e2f;

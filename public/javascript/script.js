@@ -1,12 +1,20 @@
-import {elementsData} from './elements.js'
+import { elementsData } from './elements.js'
 
 // nav bar 
 
 const ptElement = document.querySelectorAll(".pt-nav-element")
 
 ptElement.forEach((element) => {
-    element.classList.add("btn","btn-sm","pt-ele")
+    element.classList.add("btn", "btn-sm", "pt-ele")
 })
+
+function clearActiveButtons(group) {
+    console.log(group);
+    
+    group.querySelectorAll('.pt-nav-element').forEach(button => {
+        button.classList.remove('hidden-active');
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const defaultActiveButton = document.querySelector('#cg-all');
@@ -17,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.pt-filters')
         .addEventListener('click', (event) => {
             if (event.target.classList.contains('topic-item')) {
+                // clearActiveButtons(document.querySelectorAll(".pt-nav-element"));
+                
                 document
                     .querySelectorAll('.topic-item')
                     .forEach(item => {
@@ -29,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 });
+
+
 
 const nav = document.querySelector("nav")
 nav.addEventListener("click", (e) => {
@@ -103,18 +115,68 @@ nav.addEventListener("click", (e) => {
     }
 
 
+    document.querySelector('.pt-filter-hide')
+        .addEventListener('click', (event) => {
+            if (event.target.classList.contains('pt-nav-element')) {
+                clearActiveButtons(event.target.parentElement);
+                
+                if (event.target.classList.contains("pt-filter-metal")) {
+                    document
+                        .querySelectorAll('.pt-filter-metal')
+                        .forEach(item => {
+                            item.classList.add('hidden-active');
+                        });
+
+                }
+                else if (event.target.classList.contains("pt-filter-nonmetal")) {
+                    document
+                        .querySelectorAll('.pt-filter-nonmetal')
+                        .forEach(item => {
+                            item.classList.add('hidden-active');
+                        });
+                }
+                else if (event.target.classList.contains("pt-filter-states")) {
+                    document
+                        .querySelectorAll('.pt-filter-states')
+                        .forEach(item => {
+                            item.classList.add('hidden-active');
+                        });
+                }
+                else if (event.target.classList.contains("pt-filter-groups")) {
+                    document
+                        .querySelectorAll('.pt-filter-groups')
+                        .forEach(item => {
+                            item.classList.add('hidden-active');
+                        });
+                }
+                else if (event.target.classList.contains("pt-filter-periods")) {
+                    document
+                        .querySelectorAll('.pt-filter-periods')
+                        .forEach(item => {
+                            item.classList.add('hidden-active');
+                        });
+                }
+                event.target.classList.remove('hidden-active');
+            }
+        });
+
+
+
 })
 
+
 // element creation and adding 
+
 
 
 const ptTable = document.querySelector('.pt-table');
 
 elementsData.forEach(element => {
-    
+
     const div = document.createElement('div');
-    div.classList.add("pt-element", element.category); 
-    div.setAttribute("id",((element.symbol).toLowerCase()))
+    div.classList.add("pt-element", element.groupBlock.replaceAll(" ", "-"),element.standardState,
+        `g${element.group}`,`p${element.period}`);
+    div.setAttribute("id", ((element.symbol).toLowerCase()))
     div.innerHTML = `<strong>${element.symbol}</strong><br>${element.atomicNumber}`;
 
     ptTable.appendChild(div);

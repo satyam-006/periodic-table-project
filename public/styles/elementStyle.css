@@ -17,6 +17,7 @@
     justify-content: center;
     font-size: 14px;
     flex-direction: column;
+    cursor: pointer;
 
 }
 
@@ -525,4 +526,20 @@
 
 #lr {
     grid-area: 10 / 18 / 10 / 18;
+}
+
+#lanthanides{
+    grid-area: 6 / 3 / 6 / 3;
+}
+#actinides{
+    grid-area: 7 / 3 / 7 / 3;
+}
+
+/* .pt-table .noble-gas{
+
+} */
+
+.selected{
+    background-color: gray;
+    color: gray;
 }
