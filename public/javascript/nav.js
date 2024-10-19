@@ -1,5 +1,4 @@
 import { navButtonData } from './navButtonData.js'
-import { navHiddenButtonData } from './navButtonData.js'
 
 // nav creation by javascript
 const filterNav = document.querySelector(".pt-filters")
