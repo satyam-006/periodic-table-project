@@ -1,16 +1,17 @@
 import { elementsData } from './elements.js'
 
-// nav bar 
+
+
+// nav bar functionality
 
 const ptElement = document.querySelectorAll(".pt-nav-element")
 
 ptElement.forEach((element) => {
-    element.classList.add("btn", "btn-sm", "pt-ele")
+    element.classList.add("btn", "btn-sm", "pt-ele","pt-filter-button")
 })
 
-function clearActiveButtons(group) {
-    console.log(group);
-    
+const clearActiveButtons = (group)=> {
+
     group.querySelectorAll('.pt-nav-element').forEach(button => {
         button.classList.remove('hidden-active');
     });
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .addEventListener('click', (event) => {
             if (event.target.classList.contains('topic-item')) {
                 // clearActiveButtons(document.querySelectorAll(".pt-nav-element"));
-                
+
                 document
                     .querySelectorAll('.topic-item')
                     .forEach(item => {
@@ -117,9 +118,10 @@ nav.addEventListener("click", (e) => {
 
     document.querySelector('.pt-filter-hide')
         .addEventListener('click', (event) => {
+            
             if (event.target.classList.contains('pt-nav-element')) {
                 clearActiveButtons(event.target.parentElement);
-                
+
                 if (event.target.classList.contains("pt-filter-metal")) {
                     document
                         .querySelectorAll('.pt-filter-metal')
@@ -174,8 +176,8 @@ const ptTable = document.querySelector('.pt-table');
 elementsData.forEach(element => {
 
     const div = document.createElement('div');
-    div.classList.add("pt-element", element.groupBlock.replaceAll(" ", "-"),element.standardState,
-        `g${element.group}`,`p${element.period}`);
+    div.classList.add("pt-element", element.groupBlock.replaceAll(" ", "-"), element.standardState,
+        `g${element.group}`, `p${element.period}`);
     div.setAttribute("id", ((element.symbol).toLowerCase()))
     div.innerHTML = `<strong>${element.symbol}</strong><br>${element.atomicNumber}`;
 

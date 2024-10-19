@@ -23,47 +23,45 @@
             <div class="filter-div">
 
                 <div class="pt-col pt-filters">
-                    <button class="btn btn-outline-secondary btn-sm topic-item" type="button" id="cg-all">All</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                    <button class="btn btn-outline-secondary btn-sm topic-item pt-filter-button" type="button" id="cg-all">All</button>
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled pt-filter-button" type="button"
                         id="cg-metals">Metals</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled pt-filter-button" type="button"
                         id="cg-metalloids">Metalloids</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled pt-filter-button" type="button"
                         id="cg-nonmetals">Nonmetals</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled pt-filter-button" type="button"
                         id="cg-states">States</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled pt-filter-button" type="button"
                         id="cg-groups">Groups</button>
-                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled" type="button"
+                    <button class="btn btn-outline-secondary btn-sm topic-item hover-disabled pt-filter-button" type="button"
                         id="cg-periods">Periods</button>
                 </div>
             </div>
             <div class="pt-filter-hide">
-                <div class="pt-nav-element pt-alkali pt-color-guide pt-filter-metal" id="cg-alkali"
+                <div class="pt-nav-element pt-alkali pt-color-guide pt-filter-metal" id="cg-alkali-metal"
                     style="display: none;">
                     Alkali Metals</div>
-                <div class="pt-nav-element pt-alkaline pt-color-guide pt-filter-metal" id="cg-alkaline"
+                <div class="pt-nav-element pt-alkaline pt-color-guide pt-filter-metal" id="cg-alkaline-earth-metal"
                     style="display: none;">Alkaline Earth Metals</div>
-                <div class="pt-nav-element pt-transition pt-color-guide pt-filter-metal" id="cg-transition"
+                <div class="pt-nav-element pt-transition pt-color-guide pt-filter-metal" id="cg-transition-metal"
                     style="display: none;">Transition Metals</div>
-                <div class="pt-nav-element pt-post-transition pt-color-guide pt-filter-metal"
-                    id="cg-post-transition" style="display: none;">Post-Transition Metals</div>
+                <div class="pt-nav-element pt-post-transition pt-color-guide pt-filter-metal" id="cg-post-transition-metal"
+                    style="display: none;">Post-Transition Metals</div>
 
-                <!-- <div class="pt-element pt-metalloids pt-color-guide pt-filter-metal" id="cg-metalloids">Metalloids</div> -->
-                <div class="pt-nav-element pt-lanthanide pt-color-guide pt-filter-metal" id="cg-lanthanide"
+                <div class="pt-nav-element pt-lanthanide pt-color-guide pt-filter-metal" id="cg-lanthanoid"
                     style="display: none;">Lanthanides</div>
-                <div class="pt-nav-element pt-actinide pt-color-guide pt-filter-metal" id="cg-actinide"
+                <div class="pt-nav-element pt-actinide pt-color-guide pt-filter-metal" id="cg-actinoid"
                     style="display: none;">Actinides</div>
-                <!-- <div class="pt-element pt-basic pt-color-guide pt-filter-metal" id="cg-basic">Basic Metal</div> --><!-- <div class="pt-element pt-semimetal pt-color-guide pt-filter-metal" id="cg-semimetal">Semimetal</div> -->
                 <div class="pt-nav-element pt-nonmetal pt-color-guide pt-filter-nonmetal" id="cg-nonmetal"
                     style="display: none;">Nonmetals</div>
                 <div class="pt-nav-element pt-halogen pt-color-guide pt-filter-nonmetal" id="cg-halogen"
                     style="display: none;">Halogens</div>
-                <div class="pt-nav-element pt-noble pt-color-guide pt-filter-nonmetal" id="cg-noble"
+                <div class="pt-nav-element pt-noble pt-color-guide pt-filter-nonmetal" id="cg-noble-gas"
                     style="display: none;">
                     Noble Gases</div>
-                <div class="pt-nav-element pt-gas pt-color-guide pt-filter-states" id="cg-gas"
-                    style="display: none;">Gases
+                <div class="pt-nav-element pt-gas pt-color-guide pt-filter-states" id="cg-gas" style="display: none;">
+                    Gases
                 </div>
                 <div class="pt-nav-element pt-liquid pt-color-guide pt-filter-states" id="cg-liquid"
                     style="display: none;">
@@ -73,78 +71,71 @@
                     Solids</div>
                 <div class="pt-nav-element pt-unknown pt-color-guide pt-filter-states" id="cg-unknown"
                     style="display: none;">Unknown</div>
-                <div class="pt-nav-element pt-color-guide group1 pt-filter-groups" id="cg-g1"
-                    style="display: none;">1</div>
-                <div class="pt-nav-element pt-color-guide group2 pt-filter-groups" id="cg-g2"
-                    style="display: none;">2</div>
-                <div class="pt-nav-element pt-color-guide group3 pt-filter-groups" id="cg-g3"
-                    style="display: none;">3</div>
-                <div class="pt-nav-element pt-color-guide group4 pt-filter-groups" id="cg-g4"
-                    style="display: none;">4</div>
-                <div class="pt-nav-element pt-color-guide group5 pt-filter-groups" id="cg-g5"
-                    style="display: none;">5</div>
-                <div class="pt-nav-element pt-color-guide group6 pt-filter-groups" id="cg-g6"
-                    style="display: none;">6</div>
-                <div class="pt-nav-element pt-color-guide group7 pt-filter-groups" id="cg-g7"
-                    style="display: none;">7</div>
-                <div class="pt-nav-element pt-color-guide group8 pt-filter-groups" id="cg-g8"
-                    style="display: none;">8</div>
-                <div class="pt-nav-element pt-color-guide group9 pt-filter-groups" id="cg-g9"
-                    style="display: none;">9</div>
-                <div class="pt-nav-element pt-color-guide group10 pt-filter-groups" id="cg-g10"
-                    style="display: none;">10
+                <div class="pt-nav-element pt-color-guide group1 pt-filter-groups" id="cg-g1" style="display: none;">1
                 </div>
-                <div class="pt-nav-element pt-color-guide group11 pt-filter-groups" id="cg-g11"
-                    style="display: none;">11
+                <div class="pt-nav-element pt-color-guide group2 pt-filter-groups" id="cg-g2" style="display: none;">2
                 </div>
-                <div class="pt-nav-element pt-color-guide group12 pt-filter-groups" id="cg-g12"
-                    style="display: none;">12
+                <div class="pt-nav-element pt-color-guide group3 pt-filter-groups" id="cg-g3" style="display: none;">3
                 </div>
-                <div class="pt-nav-element pt-color-guide group13 pt-filter-groups" id="cg-g13"
-                    style="display: none;">13
+                <div class="pt-nav-element pt-color-guide group4 pt-filter-groups" id="cg-g4" style="display: none;">4
                 </div>
-                <div class="pt-nav-element pt-color-guide group14 pt-filter-groups" id="cg-g14"
-                    style="display: none;">14
+                <div class="pt-nav-element pt-color-guide group5 pt-filter-groups" id="cg-g5" style="display: none;">5
                 </div>
-                <div class="pt-nav-element pt-color-guide group15 pt-filter-groups" id="cg-g15"
-                    style="display: none;">15
+                <div class="pt-nav-element pt-color-guide group6 pt-filter-groups" id="cg-g6" style="display: none;">6
                 </div>
-                <div class="pt-nav-element pt-color-guide group16 pt-filter-groups" id="cg-g16"
-                    style="display: none;">16
+                <div class="pt-nav-element pt-color-guide group7 pt-filter-groups" id="cg-g7" style="display: none;">7
                 </div>
-                <div class="pt-nav-element pt-color-guide group17 pt-filter-groups" id="cg-g17"
-                    style="display: none;">17
+                <div class="pt-nav-element pt-color-guide group8 pt-filter-groups" id="cg-g8" style="display: none;">8
                 </div>
-                <div class="pt-nav-element pt-color-guide group18 pt-filter-groups" id="cg-g18"
-                    style="display: none;">18
+                <div class="pt-nav-element pt-color-guide group9 pt-filter-groups" id="cg-g9" style="display: none;">9
                 </div>
-                <div class="pt-nav-element pt-color-guide period1 pt-filter-periods" id="cg-p1"
-                    style="display: none;">1
+                <div class="pt-nav-element pt-color-guide group10 pt-filter-groups" id="cg-g10" style="display: none;">
+                    10
                 </div>
-                <div class="pt-nav-element pt-color-guide period2 pt-filter-periods" id="cg-p2"
-                    style="display: none;">2
+                <div class="pt-nav-element pt-color-guide group11 pt-filter-groups" id="cg-g11" style="display: none;">
+                    11
                 </div>
-                <div class="pt-nav-element pt-color-guide period3 pt-filter-periods" id="cg-p3"
-                    style="display: none;">3
+                <div class="pt-nav-element pt-color-guide group12 pt-filter-groups" id="cg-g12" style="display: none;">
+                    12
                 </div>
-                <div class="pt-nav-element pt-color-guide period4 pt-filter-periods" id="cg-p4"
-                    style="display: none;">4
+                <div class="pt-nav-element pt-color-guide group13 pt-filter-groups" id="cg-g13" style="display: none;">
+                    13
                 </div>
-                <div class="pt-nav-element pt-color-guide period5 pt-filter-periods" id="cg-p5"
-                    style="display: none;">5
+                <div class="pt-nav-element pt-color-guide group14 pt-filter-groups" id="cg-g14" style="display: none;">
+                    14
                 </div>
-                <div class="pt-nav-element pt-color-guide period6 pt-filter-periods" id="cg-p6"
-                    style="display: none;">6
+                <div class="pt-nav-element pt-color-guide group15 pt-filter-groups" id="cg-g15" style="display: none;">
+                    15
                 </div>
-                <div class="pt-nav-element pt-color-guide period7 pt-filter-periods" id="cg-p7"
-                    style="display: none;">7
+                <div class="pt-nav-element pt-color-guide group16 pt-filter-groups" id="cg-g16" style="display: none;">
+                    16
+                </div>
+                <div class="pt-nav-element pt-color-guide group17 pt-filter-groups" id="cg-g17" style="display: none;">
+                    17
+                </div>
+                <div class="pt-nav-element pt-color-guide group18 pt-filter-groups" id="cg-g18" style="display: none;">
+                    18
+                </div>
+                <div class="pt-nav-element pt-color-guide period1 pt-filter-periods" id="cg-p1" style="display: none;">1
+                </div>
+                <div class="pt-nav-element pt-color-guide period2 pt-filter-periods" id="cg-p2" style="display: none;">2
+                </div>
+                <div class="pt-nav-element pt-color-guide period3 pt-filter-periods" id="cg-p3" style="display: none;">3
+                </div>
+                <div class="pt-nav-element pt-color-guide period4 pt-filter-periods" id="cg-p4" style="display: none;">4
+                </div>
+                <div class="pt-nav-element pt-color-guide period5 pt-filter-periods" id="cg-p5" style="display: none;">5
+                </div>
+                <div class="pt-nav-element pt-color-guide period6 pt-filter-periods" id="cg-p6" style="display: none;">6
+                </div>
+                <div class="pt-nav-element pt-color-guide period7 pt-filter-periods" id="cg-p7" style="display: none;">7
                 </div>
             </div>
-            <button id="pt-reset" style="display: inline-block;">Reset</button>
+            <button id="pt-reset" style="display: none;">Reset</button>
         </nav>
         <div class="pt-table">
             <section class="pt-element-desc">
-                <div class="pt-alkali-desc" style="display: block;">
+                <div class="pt-alkali-desc" style="display: none;">
                     <h2>Alkali Metals</h2>
                     <p>The alkali metals form Group I of the periodic table. Their name refers to the alkaline
                         substances that form when these elements react with water. The most common of these elements are
@@ -264,8 +255,8 @@
                         they belong.</p>
                 </div>
             </section>
-            <div class="pt-element lanthanoid" id="lanthanides">Lanthanides</div>
-            <div class="pt-element actinoid" id="actinides">Actinides</div>
+            <div class="pt-element lanthanoid g3 p6" id="lanthanides">Lanthanides</div>
+            <div class="pt-element actinoid g3 p7" id="actinides">Actinides</div>
             <section class="pt-element pt-key pt-not-selected" id="key">
                 <div class="key-title">Key</div>
                 <div class="key-info"><img

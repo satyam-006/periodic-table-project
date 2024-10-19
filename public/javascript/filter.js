@@ -1,72 +1,114 @@
 const ptElement = document.querySelectorAll(".pt-element")
+const ptNavElement = document.querySelectorAll(".pt-nav-element")
+const reset = document.querySelector("#pt-reset")
 
-const filterMetals = () => {
-    ptElement.forEach((element) => {
-        if (!(element.classList.contains("metal") || element.classList.contains("alkali-metal") || element.classList.contains("alkaline-earth-metal") || element.classList.contains("transition-metal") || element.classList.contains("post-transition-metal") || element.classList.contains("lanthanoid") || element.classList.contains("actinoid"))) {
-            element.classList.add("selected")
-        }
-    })
-}
 
-const filterMetalloids = () => {
+const filterAll = () => {
     ptElement.forEach((element) => {
-        if (!(element.classList.contains("metalloid"))) {
-            element.classList.add("selected")
-        }
-    })
-}
-
-const filterNonMetals = () => {
-    ptElement.forEach((element) => {
-        if (!(element.classList.contains("nonmetal") || element.classList.contains("halogen") || element.classList.contains("noble-gas"))) {
-            element.classList.add("selected")
-        }
-    })
-}
-
-const filterStates = () => {
-    ptElement.forEach((element) => {
-        if (!(element.classList.contains("solid") || element.classList.contains("liquid") || element.classList.contains("gas") || element.classList.contains("unknown"))) {
-            element.classList.add("selected")
-        }
+        element.classList.remove("selected")
     })
 }
 
 const filterGroup = () => {
-    let group=2
     ptElement.forEach((element) => {
-        if (!element.classList.contains(`g${group}`)) {
-            element.classList.add("selected")
-        }
+
+        element.classList.remove("selected")
     })
 }
 
 const filterPeriod = () => {
-    let period=1
     ptElement.forEach((element) => {
-        if (!element.classList.contains(`p${period}`)) {
+        element.classList.remove("selected")
+
+    })
+}
+
+const filterElements = (classNames) => {
+    ptElement.forEach((element) => {
+        if (!(classNames.some(className => element.classList.contains(className)))) {
             element.classList.add("selected")
+        } else {
+            element.classList.remove("selected")
         }
     })
 }
 
-document.querySelector("#cg-metals").addEventListener("click",()=>{
-    filterMetals()
+// Update the specific filter functions to use the dynamic filterElements function
+const filterMetals = () => {
+    filterElements(["metal", "alkali-metal", "alkaline-earth-metal", "transition-metal", "post-transition-metal", "lanthanoid", "actinoid"]);
+}
+
+const filterMetalloids = () => {
+    filterElements(["metalloid"]);
+}
+
+const filterNonMetals = () => {
+    filterElements(["nonmetal", "halogen", "noble-gas"]);
+}
+
+const filterStates = () => {
+    filterElements(["solid", "liquid", "gas", "unknown"]);
+}
+
+
+const filterButtons = document.querySelectorAll('.pt-filter-button');
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+
+        reset.style.display === "inline-block" ? reset.style.display = "none" : "";
+
+        switch (button.id) {
+            case "cg-all":
+                filterAll();
+                break;
+            case "cg-metals":
+                filterMetals();
+                break;
+            case "cg-metalloids":
+                filterMetalloids();
+                break;
+            case "cg-nonmetals":
+                filterNonMetals();
+                break;
+            case "cg-states":
+                filterStates();
+                break;
+            case "cg-groups":
+                filterGroup();
+                break;
+            case "cg-periods":
+                filterPeriod();
+                break;
+            case `${button.id}`:
+                filterElements([button.id.replace("cg-", "")]);
+                break;
+        }
+
+        clearNavActiveButtons();
+    });
+});
+
+
+ptNavElement.forEach((element) => {
+
+
+    element.addEventListener("click", () => {
+
+        { reset.style.display === "none" ? reset.style.display = "inline-block" : '' }
+
+    })
 })
 
-document.querySelector("#cg-metalloids").addEventListener("click",()=>{
-    filterMetalloids()
+const clearNavActiveButtons = () => {
+    ptNavElement.forEach((element) => {
+        { element.classList.contains("hidden-active") ? element.classList.remove("hidden-active") : "" }
+    })
+}
+
+reset.addEventListener("click", () => {
+    window.location.reload()
+    
 })
-
-
-
-
-// filterMetals()
-// filterMetalloids()
-// filterNonMetals()
-// filterStates()
-// filterGroup()
-// filterPeriod()
 
 
 
