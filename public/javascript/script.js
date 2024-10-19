@@ -184,3 +184,6 @@ elementsData.forEach(element => {
     ptTable.appendChild(div);
 });
 
+
+
+

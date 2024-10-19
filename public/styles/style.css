@@ -28,6 +28,8 @@ nav {
 }
 
 .pt-filters {
+    display: flex;
+    gap: 10px;
 
     button {
         padding-left: 20px;

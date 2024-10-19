@@ -50,11 +50,26 @@ const filterStates = () => {
     filterElements(["solid", "liquid", "gas", "unknown"]);
 }
 
+const displayElementDesc = (classlist) => {
+    const elementDesc = document.querySelectorAll(".pt-ele-desc")
+
+    elementDesc.forEach((element) => {
+        if (element.classList.contains(classlist)) {
+            { element.style.display === "none" ? element.style.display = "block" : "" }
+        }
+        else {
+            element.style.display = "none"
+        }
+    })
+
+}
+
 
 const filterButtons = document.querySelectorAll('.pt-filter-button');
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-
+        // console.log(button.id);
+        displayElementDesc(`pt-${button.id.replace("cg-", "")}-desc`);
         reset.style.display === "inline-block" ? reset.style.display = "none" : "";
 
         switch (button.id) {
@@ -80,7 +95,7 @@ filterButtons.forEach(button => {
                 filterPeriod();
                 break;
             case `${button.id}`:
-                filterElements([button.id.replace("cg-", "")]);
+                filterElements([button.id.replace("cg-", "")]);               
                 break;
         }
 
@@ -107,7 +122,7 @@ const clearNavActiveButtons = () => {
 
 reset.addEventListener("click", () => {
     window.location.reload()
-    
+
 })
 
 
