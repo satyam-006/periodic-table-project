@@ -710,27 +710,27 @@
 .pt-table {
 
     & .nonmetal {
-        background-color: #ffffbb;
+        background-color: #ffde59;
     }
 
     & .noble-gas {
-        background-color: #ffe5be;
+        background-color: #ffbd59;
     }
 
     & .alkali-metal {
-        background-color: #ffc3c3;
+        background-color: rgb(255, 200, 200);
     }
 
     & .alkaline-earth-metal {
-        background-color: #d3d3ff;
+        background-color: rgb(211, 211, 255);
     }
 
     & .metalloid {
-        background-color: #dfecb8;
+        background-color: #c1ff72;
     }
 
     & .transition-metal {
-        background-color: #b9dcff;
+        background-color: #9dccfa;
     }
 
     & .post-transition-metal {
@@ -738,11 +738,11 @@
     }
 
     & .lanthanoid {
-        background-color: #afffff;
+        background-color: #5ce1e6;
     }
 
     & .actinoid {
-        background-color: #c0feea;
+        background-color: #a1e7d1;
     }
 
     & .halogen {
