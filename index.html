@@ -7,6 +7,7 @@
     <title>Periodic Table</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/styles/style.css">
     <link rel="stylesheet" href="./public/styles/elementStyle.css">
 </head>
@@ -32,8 +33,8 @@
                     style="display: none;">Alkaline Earth Metals</div>
                 <div class="pt-nav-element pt-transition pt-color-guide pt-filter-metal" id="cg-transition-metal"
                     style="display: none;">Transition Metals</div>
-                <div class="pt-nav-element pt-post-transition pt-color-guide pt-filter-metal" id="cg-post-transition-metal"
-                    style="display: none;">Post-Transition Metals</div>
+                <div class="pt-nav-element pt-post-transition pt-color-guide pt-filter-metal"
+                    id="cg-post-transition-metal" style="display: none;">Post-Transition Metals</div>
 
                 <div class="pt-nav-element pt-lanthanide pt-color-guide pt-filter-metal" id="cg-lanthanoid"
                     style="display: none;">Lanthanides</div>
@@ -249,6 +250,20 @@
                         src="https://beta-static.fishersci.com/content/dam/fishersci/en_US/images/periodic-table/key.png"
                         alt="Key" loading="lazy" data-uw-rm-alt-original="Key" data-uw-rm-alt="ALT"></div>
             </section>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Element Properties</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 

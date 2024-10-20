@@ -2,23 +2,27 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: 68px 68px 68px 68px 68px 68px 68px 40px 68px 68px;
+    grid-template-rows: 88px 88px 88px 88px 88px 88px 88px 40px 88px 88px;
     gap: 1px;
     margin-bottom: 100px;
+    margin-top: 50px;
 
 }
 
 .pt-table .pt-element {
-    width: 65px;
-    height: 65px;
-    border: 2px solid;
+    width: 62px;
+    height: 85px;
+    border: 1px solid black;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
     flex-direction: column;
+    flex-wrap: wrap;
     cursor: pointer;
-
+    text-align: center;
+    padding: 0 2px;
+    box-shadow: 1px 1px 1px rgb(207, 205, 205);
 }
 
 .pt-table .pt-element-desc {
@@ -52,44 +56,137 @@
     border: 1px solid #BEBBBB;
     width: auto;
     height: auto;
-    
-    
+
+
+}
+
+#h,
+#li,
+#na,
+#k,
+#rb,
+#cs,
+#rb,
+#fr,
+#be,
+#sc,
+#ti,
+#v,
+#cr,
+#mn,
+#fe,
+#co,
+#ni,
+#cu,
+#zn,
+#b,
+#c,
+#n,
+#o,
+#f,
+#he {
+    position: relative;
+
+    &::before {
+        color: rgb(75, 85, 99);
+        display: block;
+        font-size: .75rem;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: -1.25rem;
+        width: 100%;
+
+    }
+
+    &::after {
+        color: rgb(75, 85, 99);
+        display: block;
+        font-size: .75rem;
+        left: -65%;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 #h {
     grid-area: 1 / 1 / 1 / 1;
+    position: relative;
+
+    &::before {
+        content: "1";
+
+    }
+
+    &::after {
+        content: "1";
+    }
 }
 
 #he {
     grid-area: 1 / 18 / 1 / 18;
+
+    &::before {
+        content: "18";
+    }
 }
 
 #li {
     grid-area: 2 / 1 / 2 / 1;
+
+    &::after {
+        content: "2";
+    }
 }
 
 #be {
     grid-area: 2 / 2 / 2 / 2;
+
+    &::before {
+        content: "2";
+    }
 }
 
 #b {
     grid-area: 2/13/2/13;
+
+    &::before {
+        content: "13";
+    }
 }
 
 #c {
     grid-area: 2 / 14 / 2 / 14;
+
+    &::before {
+        content: "14";
+    }
 }
 
 #n {
     grid-area: 2 / 15 / 2 / 15;
+
+    &::before {
+        content: "15";
+    }
 }
 
 #o {
     grid-area: 2 / 16 / 2 / 16;
+
+    &::before {
+        content: "16";
+    }
 }
 
 #f {
     grid-area: 2 / 17 / 2 / 17;
+
+    &::before {
+        content: "17";
+    }
+
 }
 
 #ne {
@@ -98,6 +195,10 @@
 
 #na {
     grid-area: 3 / 1 / 3 / 1;
+
+    &::after {
+        content: "3";
+    }
 }
 
 #mg {
@@ -130,6 +231,10 @@
 
 #k {
     grid-area: 4 / 1 / 4 / 1;
+
+    &::after {
+        content: "4";
+    }
 }
 
 #ca {
@@ -138,42 +243,72 @@
 
 #sc {
     grid-area: 4 / 3 / 4 / 3;
+    &::before {
+        content: "3";
+    }
 }
 
 #ti {
     grid-area: 4 / 4 / 4 / 4;
+    &::before {
+        content: "4";
+    }
 }
 
 #v {
     grid-area: 4 / 5 / 4 / 5;
+    &::before {
+        content: "5";
+    }
 }
 
 #cr {
     grid-area: 4 / 6 / 4 / 6;
+    &::before {
+        content: "6";
+    }
 }
 
 #mn {
     grid-area: 4 / 7 / 4 / 7;
+    &::before {
+        content: "7";
+    }
 }
 
 #fe {
     grid-area: 4 / 8 / 4 / 8;
+    &::before {
+        content: "8";
+    }
 }
 
 #co {
     grid-area: 4 / 9 / 4 / 9;
+    &::before {
+        content: "9";
+    }
 }
 
 #ni {
     grid-area: 4 / 10 / 4 / 10;
+    &::before {
+        content: "10";
+    }
 }
 
 #cu {
     grid-area: 4 / 11 / 4 / 11;
+    &::before {
+        content: "11";
+    }
 }
 
 #zn {
     grid-area: 4 / 12 / 4 / 12;
+    &::before {
+        content: "12";
+    }
 }
 
 #ga {
@@ -202,6 +337,10 @@
 
 #rb {
     grid-area: 5 / 1 / 5 / 1;
+
+    &::after {
+        content: "5";
+    }
 }
 
 #sr {
@@ -274,6 +413,10 @@
 
 #cs {
     grid-area: 6 / 1 / 6 / 1;
+
+    &::after {
+        content: "6";
+    }
 }
 
 #ba {
@@ -342,6 +485,10 @@
 
 #fr {
     grid-area: 7 / 1 / 7 / 1;
+
+    &::after {
+        content: "7";
+    }
 }
 
 #ra {
@@ -528,21 +675,90 @@
     grid-area: 10 / 18 / 10 / 18;
 }
 
-#lanthanides{
+#lanthanides {
     grid-area: 6 / 3 / 6 / 3;
+    font-size: 9px;
+    font-weight: 500;
 }
-#actinides{
+
+#actinides {
     grid-area: 7 / 3 / 7 / 3;
+    font-size: 9px;
+    font-weight: 500;
 }
 
-/* .pt-table .noble-gas{
-
-} */
-
-.selected{
-    background-color: gray;
-    color: gray;
+.selected {
+    background-color: #e6e6e6 !important;
+    color: #e6e6e6 !important;
 }
-/* .not-selected{
 
-} */
+#atm-no {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#atm-symbol {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#atm-name {
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.pt-table {
+
+    & .nonmetal {
+        background-color: #ffffbb;
+    }
+
+    & .noble-gas {
+        background-color: #ffe5be;
+    }
+
+    & .alkali-metal {
+        background-color: #ffc3c3;
+    }
+
+    & .alkaline-earth-metal {
+        background-color: #d3d3ff;
+    }
+
+    & .metalloid {
+        background-color: #dfecb8;
+    }
+
+    & .transition-metal {
+        background-color: #b9dcff;
+    }
+
+    & .post-transition-metal {
+        background-color: #baffba;
+    }
+
+    & .lanthanoid {
+        background-color: #afffff;
+    }
+
+    & .actinoid {
+        background-color: #c0feea;
+    }
+
+    & .halogen {
+        background-color: #b1b1f5;
+    }
+
+}
+
+#element-page{
+    padding: 8px 15px;
+    background-color: rgb(234, 233, 233);
+    color: #39404a;
+    text-decoration: none;
+    font-weight: 600;
+
+    & :hover{
+        color: #0c0d0f;
+    }
+}

@@ -68,7 +68,7 @@ const displayElementDesc = (classlist) => {
 const filterButtons = document.querySelectorAll('.pt-filter-button');
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // console.log(button.id);
+
         displayElementDesc(`pt-${button.id.replace("cg-", "")}-desc`);
         reset.style.display === "inline-block" ? reset.style.display = "none" : "";
 
@@ -95,7 +95,7 @@ filterButtons.forEach(button => {
                 filterPeriod();
                 break;
             case `${button.id}`:
-                filterElements([button.id.replace("cg-", "")]);               
+                filterElements([button.id.replace("cg-", "")]);
                 break;
         }
 

@@ -7,10 +7,10 @@ import { elementsData } from './elements.js'
 const ptElement = document.querySelectorAll(".pt-nav-element")
 
 ptElement.forEach((element) => {
-    element.classList.add("btn", "btn-sm", "pt-ele","pt-filter-button")
+    element.classList.add("btn", "btn-sm", "pt-ele", "pt-filter-button")
 })
 
-const clearActiveButtons = (group)=> {
+const clearActiveButtons = (group) => {
 
     group.querySelectorAll('.pt-nav-element').forEach(button => {
         button.classList.remove('hidden-active');
@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.pt-filters')
         .addEventListener('click', (event) => {
             if (event.target.classList.contains('topic-item')) {
-                // clearActiveButtons(document.querySelectorAll(".pt-nav-element"));
 
                 document
                     .querySelectorAll('.topic-item')
@@ -46,8 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const nav = document.querySelector("nav")
 nav.addEventListener("click", (e) => {
 
+
     if (e.target.id === "cg-metals") {
         ptElement.forEach((element) => {
+
             if (element.classList.contains("pt-filter-metal")) {
                 element.style.display = "block"
 
@@ -118,7 +119,7 @@ nav.addEventListener("click", (e) => {
 
     document.querySelector('.pt-filter-hide')
         .addEventListener('click', (event) => {
-            
+
             if (event.target.classList.contains('pt-nav-element')) {
                 clearActiveButtons(event.target.parentElement);
 
@@ -179,11 +180,156 @@ elementsData.forEach(element => {
     div.classList.add("pt-element", element.groupBlock.replaceAll(" ", "-"), element.standardState,
         `g${element.group}`, `p${element.period}`);
     div.setAttribute("id", ((element.symbol).toLowerCase()))
-    div.innerHTML = `<strong>${element.symbol}</strong><br>${element.atomicNumber}`;
+    div.setAttribute("data-bs-toggle", "modal")
+    div.setAttribute("data-bs-target", "#exampleModal")
+    div.innerHTML = (`
+                <div id="atm-no">${element.atomicNumber}</div>
+                <div id="atm-symbol">${element.symbol}</div>
+                <span id="atm-name">${element.name}</span>    
+    `);
 
     ptTable.appendChild(div);
 });
 
 
+// display description modal
+const ptElements = document.querySelectorAll(".pt-element")
+
+ptElements.forEach((element) => {
+
+
+    element.addEventListener("click", () => {
+        const modalBody = document.querySelector(".modal-body")
+        modalBody.innerHTML = ''
+        const bgColor = [{
+            id: "nonmetal",
+            backgroundColor: "#ffffbb"
+        },
+
+        {
+            id: "noble-gas",
+            backgroundColor: "#ffe5be"
+        },
+        {
+            id: "alkali-metal",
+            backgroundColor: "#ffc3c3"
+        },
+        {
+            id: "alkaline-earth-metal",
+            backgroundColor: "#d3d3ff"
+        },
+        {
+            id: "metalloid",
+            backgroundColor: "#dfecb8"
+        },
+        {
+            id: "transition-metal",
+            backgroundColor: "#b9dcff"
+        },
+        {
+            id: "post-transition-metal",
+            backgroundColor: "#baffba"
+        },
+        {
+            id: "lanthanoid",
+            backgroundColor: "#afffff"
+        },
+        {
+            id: "actinoid",
+            backgroundColor: "#c0feea"
+        },
+        {
+            id: "halogen",
+            backgroundColor: "#b1b1f5"
+        }]
+        const div = document.createElement('div');
+        div.classList.add("d-flex", "gap-2", "align-items-center")
+        elementsData.forEach(({
+            atomicNumber, symbol, name, atomicMass, electronicConfiguration, electronegativity, vanDerWaalsRadius, ionizationEnergy, electronAffinity, oxidationStates, standardState, meltingPoint, boilingPoint, density, yearDiscovered
+        }) => {
+
+            if (element.id === symbol.toLowerCase()) {
+                bgColor.forEach(({id,backgroundColor}) => {
+                    if (element.classList.contains(id)) {
+                        
+                        div.innerHTML = (`
+                            <div class="element-image-container d-flex align-items-center justify-content-center flex-column gap-2" style="background-color:${backgroundColor};">
+                                <span style="font-size:28px">${atomicNumber}</span>
+                                <span style="font-size:4rem;line-height: 55px">${symbol}</span>
+                                <span style="font-size:28px;">${name}</span>
+                                <span style="font-size:18px;font-weight:400;text-transform: capitalize;">${standardState}</span>
+                                <a href="https://en.wikipedia.org/wiki/${name}" target="_blank" id="element-page">
+                                    <span>More About</span>
+                                    <span>${name}</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                
+                            </div>
+                            <div class="text-sm px-1">
+                                <table class="pc-table-rowed table-fixed text-left w-full content-table">
+                                    <tbody>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Atomic Mass</th>
+                                            <td class="px-4 py-1 middle">${atomicMass}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Standard State</th>
+                                            <td class="px-4 py-1 middle">${standardState}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Electron Configuration</th>
+                                            <td class="px-4 py-1 middle">${electronicConfiguration}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Oxidation States</th>
+                                            <td class="px-4 py-1 middle">${oxidationStates}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Electronegativity (Pauling
+                                                Scale)
+                                            </th>
+                                            <td class="px-4 py-1 middle">${electronegativity}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Atomic Radius (van der Waals)
+                                            </th>
+                                            <td class="px-4 py-1 middle">${vanDerWaalsRadius}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Ionization Energy</th>
+                                            <td class="px-4 py-1 middle">${ionizationEnergy}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Electron Affinity</th>
+                                            <td class="px-4 py-1 middle">${electronAffinity}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Melting Point</th>
+                                            <td class="px-4 py-1 middle">${meltingPoint}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Boiling Point</th>
+                                            <td class="px-4 py-1 middle">${boilingPoint}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="font-medium px-3 py-1 align-middle">Density</th>
+                                            <td class="px-4 py-1 middle">${density}</td>
+                                        </tr>
+                                        <tr class="border-0">
+                                            <th class="font-medium px-3 py-1 align-middle">Year Discovered</th>
+                                            <td class="px-4 py-1 middle">${yearDiscovered}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                `);
+                    }
+                })
+                modalBody.appendChild(div)
+            }
+        })
+
+    })
+})
 
 
