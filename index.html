@@ -7,7 +7,9 @@
     <title>Periodic Table</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/styles/style.css">
     <link rel="stylesheet" href="./public/styles/elementStyle.css">
 </head>
@@ -120,6 +122,15 @@
             </div>
             <button id="pt-reset" style="display: none;">Reset</button>
         </nav>
+        <div class="search-container">
+            <h1 id="heading">Periodic Table of Elements</h1>
+            <div class="input-group mb-3">
+                <input type="text" class="search-input" placeholder="Search Element..." aria-describedby="button-addon2" id="search">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
         <div class="pt-table">
             <section class="pt-element-desc">
                 <div class="pt-alkali-metal-desc pt-ele-desc" style="display: none;">
@@ -246,9 +257,6 @@
             <div class="pt-element actinoid g3 p7" id="actinides">Actinides</div>
             <section class="pt-element pt-key pt-not-selected" id="key">
                 <div class="key-title">Key</div>
-                <div class="key-info"><img
-                        src="https://beta-static.fishersci.com/content/dam/fishersci/en_US/images/periodic-table/key.png"
-                        alt="Key" loading="lazy" data-uw-rm-alt-original="Key" data-uw-rm-alt="ALT"></div>
             </section>
         </div>
 

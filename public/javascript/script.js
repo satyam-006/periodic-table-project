@@ -183,13 +183,36 @@ elementsData.forEach(element => {
     div.setAttribute("data-bs-toggle", "modal")
     div.setAttribute("data-bs-target", "#exampleModal")
     div.innerHTML = (`
-                <div id="atm-no">${element.atomicNumber}</div>
-                <div id="atm-symbol">${element.symbol}</div>
-                <span id="atm-name">${element.name}</span>    
+                <div class="atm-no">${element.atomicNumber}</div>
+                <div class="atm-symbol">${element.symbol}</div>
+                <span class="atm-name">${element.name}</span>    
     `);
 
     ptTable.appendChild(div);
 });
+
+// search element
+const search = document.querySelector("#search")
+
+search.addEventListener("keyup", (e) => {
+    const searchValue = e.target.value.toLowerCase();
+    document.querySelector("#lanthanides").classList.add("selected")
+    document.querySelector("#actinides").classList.add("selected")
+    document.querySelectorAll(".atm-name").forEach((name) => {
+
+        if (name.textContent.toLowerCase().includes(searchValue)) {
+
+
+            name.parentElement.classList.remove("selected")
+        }
+        else {
+            name.parentElement.classList.add("selected")
+        }
+    })
+
+});
+
+
 
 
 // display description modal
@@ -198,21 +221,22 @@ const ptElements = document.querySelectorAll(".pt-element")
 ptElements.forEach((element) => {
 
 
+
     element.addEventListener("click", () => {
         const modalBody = document.querySelector(".modal-body")
         modalBody.innerHTML = ''
         const bgColor = [{
             id: "nonmetal",
-            backgroundColor: "#ffffbb"
+            backgroundColor: "#ffde59"
         },
 
         {
             id: "noble-gas",
-            backgroundColor: "#ffe5be"
+            backgroundColor: "#ffbd59"
         },
         {
             id: "alkali-metal",
-            backgroundColor: "#ffc3c3"
+            backgroundColor: "#ffc8c8"
         },
         {
             id: "alkaline-earth-metal",
@@ -220,11 +244,11 @@ ptElements.forEach((element) => {
         },
         {
             id: "metalloid",
-            backgroundColor: "#dfecb8"
+            backgroundColor: "#c1ff72"
         },
         {
             id: "transition-metal",
-            backgroundColor: "#b9dcff"
+            backgroundColor: "#9dccfa"
         },
         {
             id: "post-transition-metal",
@@ -232,11 +256,11 @@ ptElements.forEach((element) => {
         },
         {
             id: "lanthanoid",
-            backgroundColor: "#afffff"
+            backgroundColor: "#5ce1e6"
         },
         {
             id: "actinoid",
-            backgroundColor: "#c0feea"
+            backgroundColor: "#a1e7d1"
         },
         {
             id: "halogen",
@@ -249,9 +273,9 @@ ptElements.forEach((element) => {
         }) => {
 
             if (element.id === symbol.toLowerCase()) {
-                bgColor.forEach(({id,backgroundColor}) => {
+                bgColor.forEach(({ id, backgroundColor }) => {
                     if (element.classList.contains(id)) {
-                        
+
                         div.innerHTML = (`
                             <div class="element-image-container d-flex align-items-center justify-content-center flex-column gap-2" style="background-color:${backgroundColor};">
                                 <span style="font-size:28px">${atomicNumber}</span>
