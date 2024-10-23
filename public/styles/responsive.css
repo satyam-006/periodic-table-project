@@ -1,55 +1,247 @@
-/* Large devices (laptops/desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Large devices (laptops/desktops, 1300px and up) */
+@media only screen and (min-width: 1300px) {
     main {
         max-width: 1600px;
         margin: auto;
-
     }
 
-    nav {}
+    .search-container .input-group {
+        width: 350px;
+    }
+
+    .pt-table .pt-element-desc h2 {
+        font-size: 1.8rem;
+    }
+
+    .pt-table .pt-element-desc p {
+        font-size: 1rem;
+    }
+
+    .pt-table {
+        column-gap: 5px;
+    }
+
+    .pt-table .pt-element {
+        width: auto;
+    }
+
+    .pt-element.pt-key {
+        width: auto;
+        height: auto;
+    }
+
+    .pt-element .key-title {
+        top: 10px;
+    }
 }
 
-/* Laptop devices (laptops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    /* styles for laptop devices */
+/* tab and Laptop devices ( 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .pt-filter-hide {
+        margin: 5px 0 0 105px;
+    }
+
+    .search-container .input-group {
+        width: 300px;
+    }
+
+    .pt-table {
+        width: calc(100%-2%);
+        gap: .25rem;
+        grid-template-rows: 78px 78px 78px 78px 78px 78px 78px 30px 78px 78px;
+    }
+
+    .pt-table .pt-element {
+        width: auto;
+        height: 75px;
+    }
+
+    .atm-name {
+        display: none;
+    }
+
+    .pt-element.pt-key {
+        height: auto;
+    }
+
+    .pt-element .key-title {
+        display: none;
+    }
+
+    .pt-table .pt-element-desc h2 {
+        font-size: 1.5rem;
+    }
+
+    .pt-table .pt-element-desc p {
+        font-size: .7rem;
+        margin-bottom: 20px;
+    }
+
+    .search-container #heading {
+        font-size: calc(1.5rem + 1vmin);
+    }
 }
 
-/* Tablet devices (tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* styles for tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    .pt-filter-hide {
+        margin: 5px 0 0 105px;
+    }
+
+    .search-container .input-group {
+        width: 300px;
+    }
+
+    .pt-table {
+        width: calc(100%-2%);
+        gap: 1.5px;
+        grid-template-rows: 63px 63px 63px 63px 63px 63px 63px 20px 63px 63px;
+    }
+
+    .pt-table .pt-element {
+        width: auto;
+        height: 60px;
+    }
+
+    .atm-no {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .atm-symbol {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .atm-name {
+        display: none;
+    }
+
+    .pt-element.pt-key {
+        height: auto;
+    }
+
+    .pt-element .key-title {
+        display: none;
+    }
+
+    .pt-table .pt-element-desc h2 {
+        font-size: 1.2rem;
+    }
+
+    .pt-table .pt-element-desc p {
+        font-size: .5rem;
+        margin-bottom: 20px;
+    }
+
+    .search-container #heading {
+        font-size: calc(1rem + 1vmin);
+    }
 }
 
-/* Mobile devices (mobiles, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-    /* styles for mobile devices */
-}
+/* mobile devices (600px and up) */
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    main{
+        overflow-x: scroll;
+    }
+    .pt-table {
+        width: calc(100%-20%);
+        gap: 1.5px;
+        grid-template-rows: 43px 43px 43px 43px 43px 43px 43px 20px 43px 43px;
+    }
 
-/* Small mobile devices (small mobiles, 480px and up) */
-@media only screen and (min-width: 480px) and (max-width: 599px) {
-    /* styles for small mobile devices */
-}
+    .pt-table .pt-element {
+        width: auto;
+        height: 40px;
+    }
 
-/* Extra small mobile devices (extra small mobiles, 320px and up) */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-    /* styles for extra small mobile devices */
-}
+    .atm-no {
+        font-size: 10px;
+        font-weight: 600;
+    }
 
-/* iPhone 5/SE (320px and down) */
-@media only screen and (max-width: 320px) {
-    /* styles for iPhone 5/SE */
-}
+    .atm-symbol {
+        font-size: 14px;
+        font-weight: 600;
+    }
 
-/* iPhone 6/7/8 (375px and down) */
-@media only screen and (max-width: 375px) {
-    /* styles for iPhone 6/7/8 */
-}
+    .atm-name {
+        display: none;
+    }
 
-/* iPhone 6/7/8 Plus (414px and down) */
-@media only screen and (max-width: 414px) {
-    /* styles for iPhone 6/7/8 Plus */
-}
+    .pt-element.pt-key {
+        height: auto;
+    }
 
-/* iPhone X (375px and down) */
-@media only screen and (max-width: 375px) and (min-height: 812px) {
-    /* styles for iPhone X */
+    .pt-element .key-title {
+        display: none;
+    }
+
+    .pt-table .pt-element-desc {
+        display: none !important;
+    }
+
+    .search-container {
+        flex-direction: column;
+
+        #heading {
+            font-size: calc(1.2rem + 1vmin);
+        }
+
+        .input-group {
+            width: 270px !important;
+            margin-top: 15px;
+        }
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .filter {
+        margin-right: 15px;
+        font-size: medium;
+
+        img{
+            width: 20px;
+        }
+    }
+    .pt-filters {
+        flex-direction: column;
+        button {
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 80px;
+
+            &::after {
+                display: none !important;
+            }
+        }
+    }
+
+    .pt-filter-hide {
+        flex-direction: column;
+    }
+
+    #pt-reset {
+        position: absolute;
+        margin: 0;
+        top: 80px;
+    }
+
+    .pt-filter-groups{
+        display: none !important;
+    }
+
+    .modal-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .element-image-container {
+        width: 350px;
+        height: 350px;
+        border-radius: 10px;
+    }
 }

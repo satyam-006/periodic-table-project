@@ -5,8 +5,6 @@
 }
 
 main {
-    width: 100dvw;
-    height: 100vh;
     padding: 0 30px;
     overflow-x: hidden;
 }
@@ -33,15 +31,16 @@ nav {
         line-height: normal;
     }
 
-    & .search-input{
+    & .search-input {
         outline: none;
         border: 1px solid;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         padding: 8px 20px;
     }
-    & .input-group{
-        width: 330px;
+
+    & .input-group {
+        width: 350px;
         margin-top: 15px;
     }
 }
@@ -58,12 +57,17 @@ nav {
 .pt-filters {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 
     button {
         padding-left: 20px;
         padding-right: 20px;
         margin-top: 6px;
     }
+}
+
+.pt-filter-hide {
+    flex-wrap: wrap;
 }
 
 .pt-filters .hover-disabled:hover {
@@ -161,4 +165,5 @@ nav {
     & tr {
         border-bottom: 1px solid #b5b6b9;
     }
+    
 }

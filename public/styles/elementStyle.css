@@ -60,10 +60,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-
-
 }
-.pt-element .key-title{
+
+.pt-element .key-title {
     position: absolute;
     top: 20px;
     font-weight: 500;
@@ -253,6 +252,7 @@
 
 #sc {
     grid-area: 4 / 3 / 4 / 3;
+
     &::before {
         content: "3";
     }
@@ -260,6 +260,7 @@
 
 #ti {
     grid-area: 4 / 4 / 4 / 4;
+
     &::before {
         content: "4";
     }
@@ -267,6 +268,7 @@
 
 #v {
     grid-area: 4 / 5 / 4 / 5;
+
     &::before {
         content: "5";
     }
@@ -274,6 +276,7 @@
 
 #cr {
     grid-area: 4 / 6 / 4 / 6;
+
     &::before {
         content: "6";
     }
@@ -281,6 +284,7 @@
 
 #mn {
     grid-area: 4 / 7 / 4 / 7;
+
     &::before {
         content: "7";
     }
@@ -288,6 +292,7 @@
 
 #fe {
     grid-area: 4 / 8 / 4 / 8;
+
     &::before {
         content: "8";
     }
@@ -295,6 +300,7 @@
 
 #co {
     grid-area: 4 / 9 / 4 / 9;
+
     &::before {
         content: "9";
     }
@@ -302,6 +308,7 @@
 
 #ni {
     grid-area: 4 / 10 / 4 / 10;
+
     &::before {
         content: "10";
     }
@@ -309,6 +316,7 @@
 
 #cu {
     grid-area: 4 / 11 / 4 / 11;
+
     &::before {
         content: "11";
     }
@@ -316,6 +324,7 @@
 
 #zn {
     grid-area: 4 / 12 / 4 / 12;
+
     &::before {
         content: "12";
     }
@@ -687,14 +696,18 @@
 
 #lanthanides {
     grid-area: 6 / 3 / 6 / 3;
+    width: auto !important;
     font-size: 9px;
     font-weight: 500;
+    display: none;
 }
 
 #actinides {
     grid-area: 7 / 3 / 7 / 3;
+    width: auto !important;
     font-size: 9px;
     font-weight: 500;
+    display: none;
 }
 
 .selected {
@@ -761,14 +774,14 @@
 
 }
 
-#element-page{
+#element-page {
     padding: 8px 15px;
     background-color: rgb(234, 233, 233);
     color: #39404a;
     text-decoration: none;
     font-weight: 600;
 
-    & :hover{
+    & :hover {
         color: #0c0d0f;
     }
 }

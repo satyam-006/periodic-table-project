@@ -199,6 +199,10 @@ search.addEventListener("keyup", (e) => {
     document.querySelector("#lanthanides").classList.add("selected")
     document.querySelector("#actinides").classList.add("selected")
     document.querySelectorAll(".atm-name").forEach((name) => {
+        if (searchValue === "") {
+            document.querySelector("#lanthanides").classList.remove("selected")
+            document.querySelector("#actinides").classList.remove("selected")
+        }
 
         if (name.textContent.toLowerCase().includes(searchValue)) {
 
@@ -267,7 +271,7 @@ ptElements.forEach((element) => {
             backgroundColor: "#b1b1f5"
         }]
         const div = document.createElement('div');
-        div.classList.add("d-flex", "gap-2", "align-items-center")
+        div.classList.add("d-flex", "gap-2", "align-items-center", "modal-container")
         elementsData.forEach(({
             atomicNumber, symbol, name, atomicMass, electronicConfiguration, electronegativity, vanDerWaalsRadius, ionizationEnergy, electronAffinity, oxidationStates, standardState, meltingPoint, boilingPoint, density, yearDiscovered
         }) => {
@@ -355,5 +359,9 @@ ptElements.forEach((element) => {
 
     })
 })
+
+
+// toggle nav 
+
 
 
