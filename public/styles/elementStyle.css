@@ -696,18 +696,11 @@
 
 #lanthanides {
     grid-area: 6 / 3 / 6 / 3;
-    width: auto !important;
-    font-size: 9px;
-    font-weight: 500;
-    display: none;
 }
 
 #actinides {
     grid-area: 7 / 3 / 7 / 3;
-    width: auto !important;
-    font-size: 9px;
-    font-weight: 500;
-    display: none;
+    
 }
 
 .selected {
