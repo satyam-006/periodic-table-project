@@ -184,7 +184,8 @@
         }
 
         .input-group {
-            width: 270px !important;
+            width: 280px !important;
+            background-color: red;
             margin-top: 15px;
         }
     }
