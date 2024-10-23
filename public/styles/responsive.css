@@ -193,9 +193,6 @@
         }
     }
     nav {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
         position: relative;
     }
 
@@ -208,7 +205,6 @@
         }
     }
     .pt-filters {
-        flex-direction: column;
         button {
             padding-left: 0px;
             padding-right: 0px;
@@ -221,17 +217,13 @@
     }
 
     .pt-filter-hide {
-        flex-direction: column;
+        margin: 5px 0 0 85px;
     }
 
     #pt-reset {
         position: absolute;
         margin: 0;
         top: 80px;
-    }
-
-    .pt-filter-groups{
-        display: none !important;
     }
 
     .modal-container{

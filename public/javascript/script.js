@@ -360,8 +360,3 @@ ptElements.forEach((element) => {
     })
 })
 
-
-// toggle nav 
-
-
-
