@@ -84,7 +84,10 @@
     }
 
     .search-container {
-        background-color: red;
+
+        & .search-input {
+            width: 200px;
+        }
 
         & #heading {
             font-size: calc(1.2rem + 1vmin);
@@ -180,13 +183,16 @@
     .search-container {
         flex-direction: column;
 
-        #heading {
+        & #heading {
             font-size: calc(1.2rem + 1vmin);
         }
 
-        .input-group {
+        & .search-input {
+            width: 200px;
+        }
+
+        & .input-group {
             width: 280px !important;
-            background-color: red;
             margin-top: 15px;
         }
     }
